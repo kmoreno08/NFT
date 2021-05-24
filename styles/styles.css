@@ -1,12 +1,17 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,7 +21,6 @@ body {
           flex-direction: column;
   background: #121212;
   width: 100%;
-  height: 100%;
 }
 
 .eth__wrapper {
@@ -75,7 +79,7 @@ body {
 
 .body__wrapper {
   width: 100%;
-  height: 1700px;
+  height: 100%;
   background: #121212;
 }
 
@@ -102,6 +106,7 @@ body {
 }
 
 .gallery__wrapper__card {
+  position: relative;
   -ms-flex-item-align: center;
       align-self: center;
   display: -webkit-box;
@@ -115,11 +120,11 @@ body {
           align-items: center;
   background: #121212;
   height: 100%;
-  width: 100%;
+  width: 85%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 20% 20% 20% 20%;
-      grid-template-columns: 20% 20% 20% 20%;
+  -ms-grid-columns: (minmax(260px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   -webkit-column-gap: 25px;
           column-gap: 25px;
   row-gap: 25px;
@@ -177,6 +182,58 @@ body {
   opacity: 0.9;
 }
 
+.bag-btn {
+  position: absolute;
+  top: 70%;
+  right: 0;
+  background: red;
+  border: none;
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+  -webkit-transform: translateX(80%);
+          transform: translateX(80%);
+  cursor: pointer;
+  z-index: 200;
+}
+
+.bag-btn:hover {
+  color: white;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.fa-shopping-cart {
+  margin-right: 0.5rem;
+}
+
+.eth-btn {
+  position: absolute;
+  top: 70%;
+  left: 0;
+  background: red;
+  border: none;
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+  -webkit-transform: translateX(-69%);
+          transform: translateX(-69%);
+  cursor: pointer;
+  z-index: 200;
+}
+
+.eth-btn:hover {
+  color: white;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
 .sellers__wrapper {
   height: 25%;
   background: red;
@@ -206,11 +263,11 @@ body {
           align-items: center;
   background: #121212;
   height: 100%;
-  width: 100%;
+  width: 85%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 20% 20% 20% 20%;
-      grid-template-columns: 20% 20% 20% 20%;
+  -ms-grid-columns: (minmax(260px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   -webkit-column-gap: 25px;
           column-gap: 25px;
 }

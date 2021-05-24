@@ -77,6 +77,7 @@ function addChrisLizarragaArt () {
     // Save the artName and image location for display in gallery
     let artName = dataArt.chris_lizarraga[i].art
     let location = dataArt.chris_lizarraga[i].location;
+    let amount = dataArt.chris_lizarraga[i].amount;
     // Add info to variable 
     galleryCardInnerHTML += `<div class="gallery-card">
     <div class="gallery-text">
@@ -84,6 +85,14 @@ function addChrisLizarragaArt () {
       <div class="gallery-artist">${artist}</div>
     </div>
     <img src=${location}>
+    <button class="bag-btn" >
+          <i class="fas fa-shopping-cart"></i>
+          add to bag
+        </button>
+        <button class="eth-btn" >
+          ${amount} Eth
+          <i class="fab fa-ethereum fa-lg"></i>
+        </button>
   </div>`;
   }
   /* Once all available artwork is added then add to 
@@ -100,12 +109,21 @@ function addDeanAndJamesArt () {
   for(let i = 0; i < deanAndJamesLength; i++){
     let artName = dataArt.dean_and_james[i].art
     let location = dataArt.dean_and_james[i].location;
+    let amount = dataArt.dean_and_james[i].amount;
     galleryCardInnerHTML += `<div class="gallery-card">
     <div class="gallery-text">
       <div class="gallery-name">${artName}</div>
       <div class="gallery-artist">${artist}</div>
     </div>
     <img src=${location}>
+    <button class="bag-btn" >
+          <i class="fas fa-shopping-cart"></i>
+          add to bag
+        </button>
+        <button class="eth-btn" >
+          ${amount} Eth
+          <i class="fab fa-ethereum fa-lg"></i>
+        </button>
   </div>`;
   }
   galleryWrapperCard.innerHTML = galleryCardInnerHTML; 
@@ -118,12 +136,21 @@ function addFlorianEyemannArt () {
   for(let i = 0; i < florianEyemannLength; i++){
     let artName = dataArt.florian_eyemann[i].art
     let location = dataArt.florian_eyemann[i].location;
+    let amount = dataArt.florian_eyemann[i].amount;
     galleryCardInnerHTML += `<div class="gallery-card">
     <div class="gallery-text">
       <div class="gallery-name">${artName}</div>
       <div class="gallery-artist">${artist}</div>
     </div>
     <img src=${location}>
+    <button class="bag-btn" >
+          <i class="fas fa-shopping-cart"></i>
+          add to bag
+        </button>
+        <button class="eth-btn" >
+          ${amount} Eth
+          <i class="fab fa-ethereum fa-lg"></i>
+        </button>
   </div>`;
   }
   galleryWrapperCard.innerHTML = galleryCardInnerHTML; 
@@ -136,12 +163,21 @@ function addJasonSimsArt () {
   for(let i = 0; i < jasonSimsLength; i++){
     let artName = dataArt.jason_sims[i].art
     let location = dataArt.jason_sims[i].location;
+    let amount = dataArt.jason_sims[i].amount;
     galleryCardInnerHTML += `<div class="gallery-card">
     <div class="gallery-text">
       <div class="gallery-name">${artName}</div>
       <div class="gallery-artist">${artist}</div>
     </div>
     <img src=${location}>
+    <button class="bag-btn" >
+          <i class="fas fa-shopping-cart"></i>
+          add to bag
+        </button>
+        <button class="eth-btn" >
+          ${amount} Eth
+          <i class="fab fa-ethereum fa-lg"></i>
+        </button>
   </div>`;
   }
   galleryWrapperCard.innerHTML = galleryCardInnerHTML; 
@@ -154,12 +190,21 @@ function addJosephKlibanskyArt () {
   for(let i = 0; i < josephKlibanskyLength; i++){
     let artName = dataArt.joseph_klibansky[i].art
     let location = dataArt.joseph_klibansky[i].location;
+    let amount = dataArt.joseph_klibansky[i].amount;
     galleryCardInnerHTML += `<div class="gallery-card">
     <div class="gallery-text">
       <div class="gallery-name">${artName}</div>
       <div class="gallery-artist">${artist}</div>
     </div>
     <img src=${location}>
+    <button class="bag-btn" >
+          <i class="fas fa-shopping-cart"></i>
+          add to bag
+        </button>
+        <button class="eth-btn" >
+          ${amount} Eth
+          <i class="fab fa-ethereum fa-lg"></i>
+        </button>
   </div>`;
   }
   galleryWrapperCard.innerHTML = galleryCardInnerHTML; 
@@ -172,12 +217,21 @@ function addKatyaZverevaArt () {
   for(let i = 0; i < katyaZverevaLength; i++){
     let artName = dataArt.katya_zvereva[i].art
     let location = dataArt.katya_zvereva[i].location;
+    let amount = dataArt.katya_zvereva[i].amount;
     galleryCardInnerHTML += `<div class="gallery-card">
     <div class="gallery-text">
       <div class="gallery-name">${artName}</div>
       <div class="gallery-artist">${artist}</div>
     </div>
     <img src=${location}>
+    <button class="bag-btn" >
+          <i class="fas fa-shopping-cart"></i>
+          add to bag
+        </button>
+        <button class="eth-btn" >
+          ${amount} Eth
+          <i class="fab fa-ethereum fa-lg"></i>
+        </button>
   </div>`;
   }
   galleryWrapperCard.innerHTML = galleryCardInnerHTML; 
@@ -190,12 +244,21 @@ function addMaryRonayneArt () {
   for(let i = 0; i < maryRonayneLength; i++){
     let artName = dataArt.mary_ronayne[i].art
     let location = dataArt.mary_ronayne[i].location;
+    let amount = dataArt.mary_ronayne[i].amount;
     galleryCardInnerHTML += `<div class="gallery-card">
     <div class="gallery-text">
       <div class="gallery-name">${artName}</div>
       <div class="gallery-artist">${artist}</div>
     </div>
     <img src=${location}>
+    <button class="bag-btn" >
+          <i class="fas fa-shopping-cart"></i>
+          add to bag
+        </button>
+        <button class="eth-btn" >
+          ${amount} Eth
+          <i class="fab fa-ethereum fa-lg"></i>
+        </button>
   </div>`;
   }
   galleryWrapperCard.innerHTML = galleryCardInnerHTML; 
@@ -208,12 +271,21 @@ function addTianYonghuaArt () {
   for(let i = 0; i < tianYonghuaLength; i++){
     let artName = dataArt.tian_yonghua[i].art
     let location = dataArt.tian_yonghua[i].location;
+    let amount = dataArt.tian_yonghua[i].amount;
     galleryCardInnerHTML += `<div class="gallery-card">
     <div class="gallery-text">
       <div class="gallery-name">${artName}</div>
       <div class="gallery-artist">${artist}</div>
     </div>
     <img src=${location}>
+    <button class="bag-btn" >
+          <i class="fas fa-shopping-cart"></i>
+          add to bag
+        </button>
+        <button class="eth-btn" >
+          ${amount} Eth
+          <i class="fab fa-ethereum fa-lg"></i>
+        </button>
   </div>`;
   }
   galleryWrapperCard.innerHTML = galleryCardInnerHTML; 
