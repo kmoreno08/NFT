@@ -19,6 +19,12 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #121212;
   width: 100%;
 }
@@ -78,9 +84,16 @@ body {
 }
 
 .body__wrapper {
-  width: 100%;
+  width: 90vw;
   height: 100%;
-  background: #121212;
+  background: blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .landing__wrapper {
@@ -90,15 +103,13 @@ body {
 
 .gallery__wrapper {
   height: 40%;
+  background: red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -107,20 +118,8 @@ body {
 
 .gallery__wrapper__card {
   position: relative;
-  -ms-flex-item-align: center;
-      align-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #121212;
+  background: coral;
   height: 100%;
-  width: 85%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(260px, 1fr))[auto-fit];
@@ -137,6 +136,7 @@ body {
   cursor: pointer;
   position: relative;
   color: white;
+  margin: 0 auto;
 }
 
 .gallery__wrapper__card .gallery-card img {
@@ -179,7 +179,7 @@ body {
 .gallery__wrapper__card .gallery-card .gallery-artist {
   margin-top: 5px;
   font-size: 18px;
-  opacity: 0.9;
+  color: gray;
 }
 
 .bag-btn {
@@ -250,26 +250,15 @@ body {
 }
 
 .sellers__wrapper__profile {
-  -ms-flex-item-align: center;
-      align-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: #121212;
   height: 100%;
-  width: 85%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(260px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   -webkit-column-gap: 25px;
           column-gap: 25px;
+  row-gap: 25px;
 }
 
 .sellers__wrapper__profile a {
@@ -288,6 +277,7 @@ body {
       grid-template-areas: "icon name" "icon amount";
   cursor: pointer;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .sellers__wrapper__profile .seller-card .seller-icon {
@@ -350,7 +340,7 @@ body {
 .title {
   background: blue;
   height: 60px;
-  width: 25%;
+  width: 40%;
   color: white;
   font-size: 24px;
   display: -webkit-box;

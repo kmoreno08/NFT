@@ -12,6 +12,8 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: rgb(18, 18, 18);
   width: 100%;
 }
@@ -52,9 +54,15 @@ body {
 }
 
 .body__wrapper {
-  width: 100%;
+  // width: 100%;
+  width: 90vw;
   height: 100%;
-  background: rgb(18, 18, 18);
+  // background: rgb(18, 18, 18);
+  background: blue;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
 }
 
 /////// Landing Page /////
@@ -67,27 +75,31 @@ body {
 
 .gallery__wrapper {
   height: 40%;
+  background: red;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  // align-items: center;
+  // align-items: flex-start;
   flex-direction: column;
 
   &__card {
     position: relative;
     // relative not here before
-    align-self: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgb(18, 18, 18);
+    // align-self: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // background: rgb(18, 18, 18);
+    background: coral;
     height: 100%;
-    width: 85%;
+    // width: 85%;
     // 100%
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     //repeat(4, 20%);
     column-gap: 25px;
     row-gap: 25px;
+    // margin: auto;
 
     .gallery-card {
       height: 270px;
@@ -96,6 +108,7 @@ body {
       cursor: pointer;
       position: relative;
       color: white;
+      margin: 0 auto;
       // transition: all 0.25s ease-in;
 
       img {
@@ -128,7 +141,7 @@ body {
       .gallery-artist {
         margin-top: 5px;
         font-size: 18px;
-        opacity: 0.9;
+        color: gray;
       }
     }
   }
@@ -188,16 +201,18 @@ body {
   justify-content: flex-start;
 
   &__profile {
-    align-self: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // align-self: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
     background: rgb(18, 18, 18);
     height: 100%;
-    width: 85%;
+    // width: 85%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     column-gap: 25px;
+    row-gap: 25px;
+    // margin: 0 auto;
 
     a {
       text-decoration: none;
@@ -215,6 +230,7 @@ body {
         "icon amount";
       cursor: pointer;
       overflow: hidden;
+      margin: 0 auto;
 
       .seller-icon {
         grid-area: icon;
@@ -264,7 +280,7 @@ body {
 .title {
   background: blue;
   height: 60px;
-  width: 25%;
+  width: 40%;
   color: white;
   font-size: 24px;
   display: flex;
