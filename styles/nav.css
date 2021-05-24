@@ -1,0 +1,126 @@
+nav {
+  height: 60px;
+  width: 100%;
+  background: #121212;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .nav {
+  height: 100%;
+  width: 95%;
+  background: #121212;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav .nav__left {
+  width: 47%;
+  background: lightcoral;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .nav__left--name {
+  height: 50px;
+  width: 100px;
+  background: red;
+}
+
+nav .nav .nav__left__searchBar {
+  width: 500px;
+  height: 54px;
+  background: #202a43 none repeat scroll 0% 0%;
+  cursor: text;
+  border: 1px solid rgba(158, 175, 208, 0.3);
+  border-radius: 8px;
+  -webkit-transition: all 0.1s ease-out 0s;
+  transition: all 0.1s ease-out 0s;
+  color: #e5ebef;
+  font-size: 1em;
+  line-height: 1.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .nav .nav__left__searchBar:hover {
+  background: #283254;
+}
+
+nav .nav .nav__left__searchBar--text {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-left: 15px;
+  letter-spacing: 0.5px;
+  padding: 13px 0px 0px 1.5rem;
+  width: 92%;
+  height: 100%;
+  overflow: hidden;
+  color: #9eafd0;
+}
+
+nav .nav__right {
+  width: 47%;
+  background: #121212;
+  height: 80%;
+}
+
+nav .nav__right__links {
+  background: #121212;
+  width: 90%;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+nav .nav__right__links .nav-button {
+  cursor: pointer;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+nav .nav__right__links .nav-button:hover {
+  -webkit-transition: all 0.12s ease-in-out 0s;
+  transition: all 0.12s ease-in-out 0s;
+  color: #e2e2e2;
+}
+
+nav .nav__right__links #nav-button-line {
+  height: 30px;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.5);
+}
+/*# sourceMappingURL=nav.css.map */

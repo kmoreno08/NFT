@@ -1,0 +1,232 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: rgb(18, 18, 18);
+  width: 100%;
+  height: 100%;
+}
+
+/// Eth Price Indicator //////
+.eth__wrapper {
+  height: 50px;
+  // height: 5%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 40px;
+
+  &--text {
+    background: black;
+    color: white;
+    width: 30%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+  }
+
+  &--amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background: green;
+    width: 20%;
+    height: 50%;
+  }
+}
+
+.body__wrapper {
+  width: 100%;
+  height: 1700px;
+  background: rgb(18, 18, 18);
+}
+
+/////// Landing Page /////
+.landing__wrapper {
+  height: 598px;
+  background: gray;
+}
+
+////// Gallery /////////
+.gallery__wrapper {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  &__card {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(18, 18, 18);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    column-gap: 25px;
+    row-gap: 25px;
+
+    .gallery-card {
+      height: 270px;
+      width: 250px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+      color: white;
+
+      img {
+        transition: transform 0.7s ease;
+        height: 100%;
+        width: 100%;
+        filter: brightness(80%);
+      }
+
+      &:hover img {
+        transform: scale(1.2);
+      }
+
+      .gallery-text {
+        height: 50%;
+        width: 80%;
+        z-index: 3;
+        position: absolute;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        padding: 0.25em 0 0 0.5em;
+        font-weight: 600;
+      }
+
+      .gallery-name {
+        font-size: 22px;
+      }
+
+      .gallery-artist {
+        margin-top: 5px;
+        font-size: 18px;
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+///// Sellers //////
+
+.sellers__wrapper {
+  height: 25%;
+  // background: rgb(18, 18, 18);
+  background: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  &__profile {
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(18, 18, 18);
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    column-gap: 25px;
+
+    a {
+      text-decoration: none;
+    }
+
+    .seller-card {
+      background: black;
+      color: white;
+      width: 250px;
+      height: 125px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "icon name"
+        "icon amount";
+      cursor: pointer;
+      overflow: hidden;
+
+      .seller-icon {
+        grid-area: icon;
+        background: lightcoral;
+        height: 100%;
+        width: 100%;
+
+        & img {
+          object-fit: cover;
+          height: 125px;
+          width: 125px;
+        }
+      }
+
+      .seller-name {
+        grid-area: name;
+        display: flex;
+        align-items: flex-end;
+      }
+
+      .seller-amount {
+        grid-area: amount;
+      }
+    }
+  }
+}
+
+// Explore ///////////
+
+.explore__wrapper {
+  height: 30%;
+  background: peachpuff;
+
+  // Explore - card
+  &__card {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    max-width: 1100px;
+    justify-content: center;
+    align-items: center;
+    background: black;
+  }
+}
+
+// Utility
+.title {
+  background: blue;
+  height: 60px;
+  width: 25%;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+}
+
+.center-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.body-margin {
+  margin: 0 2%;
+}

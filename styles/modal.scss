@@ -1,0 +1,185 @@
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+#modal__wrapper {
+  // background: green;
+  margin: 5% auto;
+  width: 60%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#modal__wrapper__searchBox {
+  width: 100%;
+  height: 54px;
+  background: rgb(24, 35, 56) none repeat scroll 0% 0%;
+  cursor: default;
+  border: 1px solid rgba(158, 175, 208, 0.3);
+  border-radius: 8px;
+  transition: all 0.1s ease-out 0s;
+  color: #7f8da8;
+  font-size: 1em;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px 20px 50px;
+  background: lightcoral;
+}
+#modal__wrapper__searchBox--left {
+  display: flex;
+  width: 80%;
+}
+.modal__searchBox--text {
+  background-color: rgb(24, 35, 56);
+  width: 100%;
+  color: rgb(229, 235, 239);
+}
+input[type="searchText"] {
+  padding: 6px;
+  border: none;
+  font-size: 20px;
+  text-align: left;
+}
+.modal__wrapper__searchBox__left--icon {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+#modal__wrapper__searchBox--right {
+  width: 11%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal__wrapper__searchBox--clearButton:hover,
+.modal__wrapper__searchBox--closeButton:hover {
+  color: rgb(229, 235, 239);
+  cursor: pointer;
+}
+
+.nav__left__searchBar {
+  width: 600px;
+  height: 54px;
+  background: rgb(32, 42, 67) none repeat scroll 0% 0%;
+  cursor: text;
+  border: 1px solid rgba(158, 175, 208, 0.3);
+  border-radius: 8px;
+  transition: all 0.1s ease-out 0s;
+  color: rgb(229, 235, 239);
+  font-size: 1em;
+  line-height: 1.5;
+  cursor: text;
+  display: flex;
+  align-items: center;
+}
+.nav__left__searchBar:hover {
+  background: #283254;
+}
+.nav__left__searchBar--text {
+  font-weight: 400;
+  font-size: 1rem;
+  margin-left: 15px;
+  letter-spacing: 0.5px;
+  padding: 13px 0px 0px 1.5rem;
+  width: 92%;
+  height: 100%;
+  overflow: hidden;
+  color: rgb(158, 175, 208);
+}
+
+// Modal with search card //
+#modal__content {
+  display: block;
+  margin-top: 10px;
+  // background-color: rgb(24, 35, 56);
+  background: red;
+  height: 60vh;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  z-index: 99;
+}
+// Search Card
+.searchCard {
+  background: blue;
+  font-size: 22px;
+  color: white;
+  height: 65px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  letter-spacing: 2.5px;
+  margin-bottom: 25px;
+
+  &:hover {
+    cursor: pointer;
+    background: #283254;
+  }
+
+  // Left half search card
+  &-left {
+    margin-right: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
+    border-right-style: solid;
+    border-width: 0.1px;
+    background: coral;
+
+    & img {
+      height: 100%;
+      width: 100px;
+    }
+
+    & h5 {
+      width: 25%;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    & h4 {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  // Right side of search card
+  &-right {
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+    background: lightgreen;
+
+    & h5 {
+      display: flex;
+      justify-content: center;
+      width: 35%;
+    }
+  }
+
+  &-img {
+    display: flex;
+    width: 10%;
+
+    & img {
+      height: 25px;
+      width: 25px;
+    }
+  }
+}

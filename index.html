@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags --> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/carousel.css" />
+    <link rel="stylesheet" href="styles/modal.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>NFT</title>
+  </head>
+  <body class="scroll">
+
+    
+      
+
+    <!-- NAVIGATION -->
+<nav>
+ <div class="nav">
+    <div class="nav__left">
+     <div class="nav__left--name">
+       <h1>NFT</h1>
+     </div>
+
+
+     <!-- Search bar -->
+      <div class="nav__left__searchBar">
+       <div class="nav__left__searchBar--text"></div>
+       <div class="nav__left__searchBar--icon">
+         <i class="fas fa-search"></i>
+       </div>
+      </div>
+
+
+      <!-- Search Bar - Modal  -->
+      <div id="modal">
+        <div id="modal__wrapper">
+          <div id="modal__wrapper__searchBox">
+            <div id="modal__wrapper__searchBox--left">
+              <div class="modal__wrapper__searchBox__left--icon"><i class="fas fa-search"></i></div>
+              <input type="searchText" 
+              placeholder=" "
+              autofocus
+              autocomplete="off"
+              class="modal__searchBox--text">
+            </div>
+            <div id="modal__wrapper__searchBox--right">
+              <span class="modal__wrapper__searchBox--clearButton">Clear</span>
+              <span class="modal__wrapper__searchBox--closeButton">X</span>
+            </div>
+          </div>
+          <div id="modal__content">
+            <div id="modal__content--list"></div>
+          </div>
+        </div>
+        </div>
+    </div>
+    
+ 
+       
+   <div class="nav__right">
+    <div class="nav__right__links">
+      <a href="#gallery" id="nav-button-explore" class="nav-button">Gallery</a>
+      <a href="#explore" id="nav-button-myItems" class="nav-button">My Items</a>
+      <div id="nav-button-line"></div>
+      <div class="dropdown">
+        <a id="nav-button-logIn" class="nav-button">Log In</a>
+      </div>
+      <a href="signup.html" id="nav-button-signUp" class="nav-button">Sign Up</a>
+    </div>
+   </div>
+ </div>
+</nav>
+
+
+<!--Carousel-->
+<div id="carousel" class="carousel">
+  <button class="carousel__button carousel__button--left is-hidden">
+    <i class="fas fa-angle-left fa-4x"></i>
+  </button>
+  <div class="carousel__track-container">
+    <ul class="carousel__track">
+      <li class="carousel__slide current-slide">
+        <img
+          class="carousel__images"
+          src="/img/landing/crypto_3.jpg"
+          alt=""
+        />
+        <div class="carousel__textWrap right">
+           <div class="carousel__textWrap-textBox"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus autem voluptas asperiores optio vel architecto nesciunt totam accusamus tempore</div>
+          <a href="signup.html" class="carousel__textWrap--button">Create an account</a>
+        </div>
+      </li>
+      <li class="carousel__slide">
+        <img
+          class="carousel__images"
+          src="/img/landing/crates.jpg"
+          alt=""
+        />
+        <div class="carousel__textWrap left">
+          <div class="carousel__textWrap-textBox"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus autem voluptas asperiores optio vel architecto nesciunt totam accusamus tempore</div>
+         <a href="signup.html" class="carousel__textWrap--button">Create an account</a>
+       </div>
+        
+      <li class="carousel__slide">
+        <img
+          class="carousel__images"
+          src="/img/landing/spiral.jpg"
+          alt=""
+        />
+        <div class="carousel__textWrap right">
+          <div class="carousel__textWrap-textBox"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus autem voluptas asperiores optio vel architecto nesciunt totam accusamus tempore</div>
+         <a href="signup.html" class="carousel__textWrap--button">Create an account</a>
+       </div>
+      
+      </li>
+      <li class="carousel__slide">
+        <img
+          class="carousel__images"
+          src="/img/landing/choose_light.jpg"
+          alt=""
+        />
+        <div class="carousel__textWrap left">
+          <div class="carousel__textWrap-textBox"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus autem voluptas asperiores optio vel architecto nesciunt totam accusamus tempore</div>
+         <a href="signup.html" class="carousel__textWrap--button">Create an account</a>
+       </div>
+        
+      </li>
+      <li class="carousel__slide">
+        <img
+          class="carousel__images"
+          src="/img/landing/light_mountain.jpg"
+          alt=""
+        />
+        <div class="carousel__textWrap right">
+          <div class="carousel__textWrap-textBox"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ducimus autem voluptas asperiores optio vel architecto nesciunt totam accusamus tempore</div>
+         <a href="signup.html" class="carousel__textWrap--button">Create an account</a>
+       </div>
+        
+      </li>
+    </ul>
+  </div>
+  <button class="carousel__button carousel__button--right">
+    <i class="fas fa-angle-right fa-4x"></i>
+  </button>
+
+  <div class="carousel__nav">
+    <button class="carousel__indicator current-slide"></button>
+    <button class="carousel__indicator"></button>
+    <button class="carousel__indicator"></button>
+    <button class="carousel__indicator"></button>
+    <button class="carousel__indicator"></button>
+  </div>
+</div>
+
+
+<!-- <div class="body__wrapper"> -->
+
+<div id="eth" class="eth__wrapper">
+  <div class="eth__wrapper--text">The current price of Ethereum in USD : </div>
+  <div class="eth__wrapper--amount">$AMOUNT</div>
+  <div class="eth__wrapper--claim">CLAIM</div>
+</div>
+
+
+<div class="body__wrapper">
+ 
+
+
+  <!-- Gallery -->
+  <div id="gallery" class="gallery__wrapper body-margin">
+    <div class="title">Gallery</div>
+    <div class="gallery__wrapper__card">
+
+      <div class="gallery-card">
+        <div class="gallery-text">
+          <div class="gallery-name">Even Shadows</div>
+          <div class="gallery-artist">Chris Lizarraga</div>
+        </div>
+        <img src="../img/artist/chris_lizarraga/even_shadows.png">
+      </div>
+      <div class="gallery-card">
+        <div class="gallery-text">
+          <div class="gallery-name">A Window of Opportunity</div>
+          <div class="gallery-artist">Dean and Games</div>
+        </div>
+        <img src="../img/artist/dean_and_james/a_window_of_opportunity.jpg">
+      </div>
+      <div class="gallery-card">
+        <div class="gallery-text">
+          <div class="gallery-name">Flowers</div>
+          <div class="gallery-artist">Florian Eyemann</div>
+        </div>
+        <img src="../img/artist/florian_eyemann/flowers.jpg">
+      </div>
+      <div class="gallery-card">
+        <div class="gallery-text">
+          <div class="gallery-name">3ft Rise</div>
+          <div class="gallery-artist">Jason Sims</div>
+        </div>
+        <img src="../img/artist/jason_sims/3ft_rise.jpg">
+      </div>
+      <div class="gallery-card">
+        <div class="gallery-text">
+          <div class="gallery-name">Self Portrait of a Dreamer</div>
+          <div class="gallery-artist">Joseph Klibanksy</div>
+        </div>
+        <img src="../img/artist/joseph_klibansky/self_portrait_of_a_dreamer.jpg">
+      </div>
+      <div class="gallery-card">
+        <div class="gallery-text">
+          <div class="gallery-name">California</div>
+          <div class="gallery-artist">Katya Zvereva</div>
+        </div>
+        <img src="../img/artist/katya_zvereva/california.jpg">
+      </div>
+      <div class="gallery-card">
+        <div class="gallery-text">
+          <div class="gallery-name">Bennie Doyle</div>
+          <div class="gallery-artist">Mary Ronayne</div>
+        </div>
+        <img src="../img/artist/mary_ronayne/bennie_doyle.jpg">
+      </div>
+      <div class="gallery-card">
+        <div class="gallery-text">
+          <div class="gallery-name">Mascot</div>
+          <div class="gallery-artist">Tian Yonghua</div>
+        </div>
+        <img src="../img/artist/tian_yonghua/mascot.jpg">
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- Sellers -->
+  <div id="seller" class="sellers__wrapper body-margin">
+    <div class="title">Select Artist</div>
+    <div class="sellers__wrapper__profile">
+      <a href="#gallery">
+        <div id="seller--chris-lizarraga" class="seller-card">
+          <div class="seller-icon ">
+            <img src="../img/artist/chris_lizarraga/trapped.jpg">
+          </div>
+         <div class="seller-name">Chris Lizarraga</div>
+         <div class="seller-amount">Total ETH</div>
+        </div>
+      </a>
+      <a href="#gallery">
+        <div id="seller--dean-and-james"class="seller-card">
+          <div class="seller-icon">
+            <img src="../img/artist/dean_and_james/the_storm.jpg">
+          </div>
+        <div class="seller-name">Dean and James</div>
+        <div class="seller-amount">Total ETH</div>
+        </div>
+      </a>
+      <a href="#gallery">
+        <div id="seller--florian-eyemann"class="seller-card">
+          <div class="seller-icon">
+            <img src="../img/artist/florian_eyemann/skulls.jpg">
+          </div>
+        <div class="seller-name">Florian Eyemann</div>
+        <div class="seller-amount">Total Eth</div>
+        </div>
+      </a>
+      <a href="#gallery">
+        <div id="seller--jason-sims" class="seller-card">
+          <div class="seller-icon">
+            <img src="../img/artist/jason_sims/on_the_horizon--arch.jpg">
+          </div>
+        <div class="seller-name">Jason Sims</div>
+        <div class="seller-amount">Total Eth</div>
+        </div>
+      </a>
+      <a href="#gallery">
+        <div id="seller--joseph-klibansky"class="seller-card">
+          <div class="seller-icon">
+            <img src="../img/artist/joseph_klibansky/the_thinker.jpg">
+          </div>
+        <div class="seller-name">Joseph Klibanksy</div>
+        <div class="seller-amount">Total Eth</div>
+        </div>
+      </a>
+      <a href="#gallery">
+        <div id="seller--katya-zvereva" class="seller-card">
+          <div class="seller-icon">
+            <img src="../img/artist/katya_zvereva/seeker.jpg">
+          </div>
+        <div class="seller-name">Katya Zvereva</div>
+        <div class="seller-amount">Total Eth</div>
+        </div>
+      </a>
+      <a href="#gallery">
+        <div id="seller--mary-ronayne"class="seller-card">
+          <div class="seller-icon">
+            <img src="../img/artist/mary_ronayne/the_darlington.jpg">
+          </div>
+        <div class="seller-name">Mary Ronayne</div>
+        <div class="seller-amount">Total Eth</div>
+        </div>
+      </a>
+      <a href="#gallery">
+        <div id="seller--tian-yonghua"class="seller-card">
+        <div class="seller-icon">
+          <img src="../img/artist/tian_yonghua/wave_2.jpg">
+        </div>
+        <div class="seller-name">Tian Yonhua</div>
+        <div class="seller-amount">Total Eth</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+
+  <!-- Explore -->
+  <div id="explore" class="explore__wrapper body-margin">
+      <div class="title">My Items</div>
+    </div>
+    <div class="explore__wrapper__card"></div>
+  </div>
+</div>
+  </body>
+  <script type="text/javascript" src="data.js"></script>
+  <script type="text/javascript" src="js/carousel.js"></script>
+  <script type="text/javascript" src="js/searchBar.js"></script>
+  <script type="text/javascript" src="js/selectArtist.js"></script>
+</html>
