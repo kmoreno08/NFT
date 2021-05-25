@@ -1,0 +1,152 @@
+{
+  "artist": [
+    {
+      "name": "christoper lizarraga",
+      "art": [{
+        "name": "even shadows",
+        "imgLocation": "(../img/artist/chris_lizarraga/even_shadows.png)"
+      },
+      {
+        "name": "kinetic",
+        "imgLocation": "(../img/artist/chris_lizarraga/kinetic.jpg)"
+      },
+      {
+        "name": "the new normal",
+        "imgLocation": "(../img/artist/chris_lizarraga/the_new_normal.jpg)"
+      },
+      {
+       "name": "trapped",
+       "imgLocation": "(../img/artist/chris_lizarraga/trapped.jpg)"
+      }]  
+    },
+    {
+      "name": "dean and james",
+      "art": [{
+        "name": "a window of opportunity",
+        "imgLocation": "(../img/artist/dean_and_james/a_window_of_opportunity.jpg)"
+      },
+      {
+        "name": "facing reality",
+        "imgLocation": "(../img/artist/dean_and_james/facing_reality.jpg)"
+
+      },
+      {
+        "name": "the storm",
+        "imgLocation": "(../img/artist/dean_and_james/the_storm.jpg)"
+      }]
+
+    },
+    {
+      "name": "florian eyemann",
+      "art": [{
+        "name": "flowers",
+        "imgLocation": "(../img/artist/florian_eyemann/flowers.jpg)"
+      },
+      {
+        "name": "portrait",
+        "imgLocation": "(../img/artist/florian_eyemann/portrait.jpg)"
+      },
+      {
+        "name": "skulls",
+        "imgLocation": "(../img/artist/florian_eyemann/skulls.jpg)"
+      }]
+    },
+    {
+      "name": "jason sims",
+      "art": [{
+        "name": "3ft rise",
+        "imgLocation": "(../img/artist/jason_sims/3ft_rise.jpg)"
+      },
+      {
+        "name": "4ft stack",
+        "imgLocation": "(../img/artist/jason_sims/4ft_stack.jpg)"
+      },
+      {
+        "name": "dual six",
+        "imgLocation": "(../img/artist/jason_sims/dual_vi.jpg)"
+      },
+      {
+        "name": "light break nexus",
+        "imgLocation": "(../img/artist/jason_sims/light_break--nexus.jpg)"
+      },
+      {
+        "name": "on the horizon two",
+        "imgLocation": "(../img/artist/jason_sims/on_the_horizon_II.jpg)"
+      },
+      {
+        "name": "on the horizon arch",
+        "imgLocation": "(../img/artist/jason_sims/on_the_horizon--arch.jpg)"
+      }]
+    },
+    {
+      "name": "joseph klibansky",
+      "art": [{
+        "name": "self portrait of a dreamer",
+        "imgLocation": "(../img/artist/joseph_klibansky/self_portrait_of_a_dreamer.jpg)"
+      },
+      {
+        "name": "take me to paradise",
+        "imgLocation": "(../img/artist/joseph_klibansky/take_me_to_paradise.jpg)"
+      },
+      {
+        "name": "the thinker" ,
+        "imgLocation": "(../img/artist/joseph_klibansky/the_thinker.jpg)"
+      }]
+    },
+    {
+      "name": "katya zvereva",
+      "art": [{
+        "name": "california",
+        "imgLocation": "(../img/artist/katya_zvereva/california.jpg)"
+      },
+      {
+        "name": "dreamer",
+        "imgLocation": "(../img/artist/katya_zvereva/dreamer.jpg)"
+      },
+      {
+        "name": "seeker",
+        "imgLocation": "(../img/artist/katya_zvereva/seeker.jpg)"
+      }]
+    },
+    {
+      "name": "mary ronayne",
+      "art": [{
+        "name": "bennie doyle",
+        "imgLocation": "(../img/artist/mary_ronayne/bennie_doyle.jpg)"
+      },
+      {
+        "name": "liverpool wedding",
+        "imgLocation": "(../img/artist/mary_ronayne/liverpool_wedding.jpg)"
+      },
+      {
+        "name": "the darlington",
+        "imgLocation": "(../img/artist/mary_ronayne/the_darlington.jpg)"
+      }]
+    },
+    {
+      "name": "tian yonghua",
+      "art":[{
+        "name": "mascot",
+        "imgLocation": "(../img/artist/tian_yonghua/mascot.jpg)"
+      },
+      { 
+        "name": "touch",
+        "imgLocation": "(../img/artist/tian_yonghua/touch.jpg)"
+      },
+      {
+        "name": "virtual mirror",
+        "imgLocation": "(../img/artist/tian_yonghua/virtual_mirror.jpg)"
+      },
+      {
+        "name": "wave 2",
+        "imgLocation": "(../img/artist/tian_yonghua/wave_2.jpg)"
+      }]
+    }
+  ]
+  }
+    
+
+
+
+
+
