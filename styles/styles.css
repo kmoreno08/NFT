@@ -102,7 +102,6 @@ body {
 }
 
 .gallery__wrapper {
-  height: 40%;
   background: red;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -184,7 +183,7 @@ body {
 
 .bag-btn {
   position: absolute;
-  top: 70%;
+  top: 80%;
   right: 0;
   background: red;
   border: none;
@@ -212,7 +211,7 @@ body {
 
 .eth-btn {
   position: absolute;
-  top: 70%;
+  top: 80%;
   left: 0;
   background: red;
   border: none;
@@ -222,8 +221,6 @@ body {
   font-weight: bold;
   -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
-  -webkit-transform: translateX(-69%);
-          transform: translateX(-69%);
   cursor: pointer;
   z-index: 200;
 }
@@ -235,7 +232,6 @@ body {
 }
 
 .sellers__wrapper {
-  height: 25%;
   background: red;
   display: -webkit-box;
   display: -ms-flexbox;

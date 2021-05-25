@@ -192,8 +192,8 @@ input[type="searchText"] {
 }
 
 .searchCard-left img {
-  height: 100%;
-  width: 100px;
+  height: 75px;
+  width: 75px;
 }
 
 .searchCard-left h5 {
@@ -201,19 +201,12 @@ input[type="searchText"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-}
-
-.searchCard-left h4 {
-  width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .searchCard-right {
@@ -233,6 +226,9 @@ input[type="searchText"] {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 35%;
 }
 
