@@ -45,7 +45,7 @@ let dataArt = {
     {art: "Portait",
     artist: "Florian Eyemann",
     amount: 17,
-    location: "../img/artist/florian_eyemann/portait.jpg"},
+    location: "../img/artist/florian_eyemann/portrait.jpg"},
     {art: "Skulls",
     artist: "Florian Eyemann",
     amount: 45,
@@ -173,7 +173,7 @@ closeBtn.addEventListener("click", closeModal);
 clearBtn.addEventListener("click", clearTextBox);
 // Function to clear text box
 function clearTextBox() {
-  modalSearchBox.value = " ";
+  modalSearchBox.value = "";
   clearSearchBar();
 }
 // Function to open modal

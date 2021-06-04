@@ -1,149 +1,208 @@
-{
-  "artist": [
+{"artist": [
     {
       "name": "christoper lizarraga",
       "art": [{
+        "id": 1,
         "name": "even shadows",
-        "imgLocation": "(../img/artist/chris_lizarraga/even_shadows.png)"
+        "price": 10,
+        "imgLocation": "../img/artist/chris_lizarraga/even_shadows.png"
       },
       {
+        "id": 2,
         "name": "kinetic",
-        "imgLocation": "(../img/artist/chris_lizarraga/kinetic.jpg)"
+        "price": 20,
+        "imgLocation": "../img/artist/chris_lizarraga/kinetic.jpg"
       },
       {
+        "id": 3,
         "name": "the new normal",
-        "imgLocation": "(../img/artist/chris_lizarraga/the_new_normal.jpg)"
+        "price": 12,
+        "imgLocation": "../img/artist/chris_lizarraga/the_new_normal.jpg"
       },
       {
+        "id": 4,
        "name": "trapped",
-       "imgLocation": "(../img/artist/chris_lizarraga/trapped.jpg)"
+       "price": 13,
+       "imgLocation": "../img/artist/chris_lizarraga/trapped.jpg"
       }]  
     },
     {
       "name": "dean and james",
       "art": [{
+        "id": 5,
         "name": "a window of opportunity",
-        "imgLocation": "(../img/artist/dean_and_james/a_window_of_opportunity.jpg)"
+        "price": 30,
+        "imgLocation": "../img/artist/dean_and_james/a_window_of_opportunity.jpg"
       },
       {
+        "id": 6,
         "name": "facing reality",
-        "imgLocation": "(../img/artist/dean_and_james/facing_reality.jpg)"
+        "price": 11,
+        "imgLocation": "../img/artist/dean_and_james/facing_reality.jpg"
 
       },
       {
+        "id": 7,
         "name": "the storm",
-        "imgLocation": "(../img/artist/dean_and_james/the_storm.jpg)"
+        "price": 12,
+        "imgLocation": "../img/artist/dean_and_james/the_storm.jpg"
       }]
 
     },
     {
       "name": "florian eyemann",
       "art": [{
+        "id": 8,
         "name": "flowers",
-        "imgLocation": "(../img/artist/florian_eyemann/flowers.jpg)"
+        "price": 10,
+        "imgLocation": "../img/artist/florian_eyemann/flowers.jpg"
       },
       {
+        "id": 9,
         "name": "portrait",
-        "imgLocation": "(../img/artist/florian_eyemann/portrait.jpg)"
+        "price": 17,
+        "imgLocation": "../img/artist/florian_eyemann/portrait.jpg"
       },
       {
+        "id": 10,
         "name": "skulls",
-        "imgLocation": "(../img/artist/florian_eyemann/skulls.jpg)"
+        "price": 45,
+        "imgLocation": "../img/artist/florian_eyemann/skulls.jpg"
       }]
     },
     {
       "name": "jason sims",
       "art": [{
+        "id": 11,
         "name": "3ft rise",
-        "imgLocation": "(../img/artist/jason_sims/3ft_rise.jpg)"
+        "price": 20,
+        "imgLocation": "../img/artist/jason_sims/3ft_rise.jpg"
       },
       {
+        "id": 12,
         "name": "4ft stack",
-        "imgLocation": "(../img/artist/jason_sims/4ft_stack.jpg)"
+        "price": 28,
+        "imgLocation": "../img/artist/jason_sims/4ft_stack.jpg"
       },
       {
+        "id": 13,
         "name": "dual six",
-        "imgLocation": "(../img/artist/jason_sims/dual_vi.jpg)"
+        "price": 30,
+        "imgLocation": "../img/artist/jason_sims/dual_vi.jpg"
       },
       {
+        "id": 14,
         "name": "light break nexus",
-        "imgLocation": "(../img/artist/jason_sims/light_break--nexus.jpg)"
+        "price": 33,
+        "imgLocation": "../img/artist/jason_sims/light_break--nexus.jpg"
       },
       {
+        "id": 15,
         "name": "on the horizon two",
-        "imgLocation": "(../img/artist/jason_sims/on_the_horizon_II.jpg)"
+        "price": 10,
+        "imgLocation": "../img/artist/jason_sims/on_the_horizon_II.jpg"
       },
       {
+        "id": 16,
         "name": "on the horizon arch",
-        "imgLocation": "(../img/artist/jason_sims/on_the_horizon--arch.jpg)"
+        "price": 35,
+        "imgLocation": "../img/artist/jason_sims/on_the_horizon--arch.jpg"
       }]
     },
     {
       "name": "joseph klibansky",
       "art": [{
+        "id": 17,
         "name": "self portrait of a dreamer",
-        "imgLocation": "(../img/artist/joseph_klibansky/self_portrait_of_a_dreamer.jpg)"
+        "price": 18,
+        "imgLocation": "../img/artist/joseph_klibansky/self_portrait_of_a_dreamer.jpg"
       },
       {
+        "id": 18,
         "name": "take me to paradise",
-        "imgLocation": "(../img/artist/joseph_klibansky/take_me_to_paradise.jpg)"
+        "price": 11,
+        "imgLocation": "../img/artist/joseph_klibansky/take_me_to_paradise.jpg"
       },
       {
-        "name": "the thinker" ,
-        "imgLocation": "(../img/artist/joseph_klibansky/the_thinker.jpg)"
+        "id": 19,
+        "name": "the thinker",
+        "price": 16,
+        "imgLocation": "../img/artist/joseph_klibansky/the_thinker.jpg"
       }]
     },
     {
       "name": "katya zvereva",
       "art": [{
+        "id": 20,
         "name": "california",
-        "imgLocation": "(../img/artist/katya_zvereva/california.jpg)"
+        "price": 10,
+        "imgLocation": "../img/artist/katya_zvereva/california.jpg"
       },
       {
+        "id": 21,
         "name": "dreamer",
-        "imgLocation": "(../img/artist/katya_zvereva/dreamer.jpg)"
+        "price": 19,
+        "imgLocation": "../img/artist/katya_zvereva/dreamer.jpg"
       },
       {
+        "id": 22,
         "name": "seeker",
-        "imgLocation": "(../img/artist/katya_zvereva/seeker.jpg)"
+        "price": 12,
+        "imgLocation": "../img/artist/katya_zvereva/seeker.jpg"
       }]
     },
     {
       "name": "mary ronayne",
       "art": [{
+        "id": 23,
         "name": "bennie doyle",
-        "imgLocation": "(../img/artist/mary_ronayne/bennie_doyle.jpg)"
+        "price": 12,
+        "imgLocation": "../img/artist/mary_ronayne/bennie_doyle.jpg"
       },
       {
+        "id": 24,
         "name": "liverpool wedding",
-        "imgLocation": "(../img/artist/mary_ronayne/liverpool_wedding.jpg)"
+        "price": 13,
+        "imgLocation": "../img/artist/mary_ronayne/liverpool_wedding.jpg"
       },
       {
+        "id": 25,
         "name": "the darlington",
-        "imgLocation": "(../img/artist/mary_ronayne/the_darlington.jpg)"
+        "price": 19,
+        "imgLocation": "../img/artist/mary_ronayne/the_darlington.jpg"
       }]
     },
     {
       "name": "tian yonghua",
       "art":[{
+        "id": 26,
         "name": "mascot",
-        "imgLocation": "(../img/artist/tian_yonghua/mascot.jpg)"
+        "price": 15,
+        "imgLocation": "../img/artist/tian_yonghua/mascot.jpg"
       },
-      { 
+      {
+        "id": 27,
         "name": "touch",
-        "imgLocation": "(../img/artist/tian_yonghua/touch.jpg)"
+        "price": 15,
+        "imgLocation": "../img/artist/tian_yonghua/touch.jpg"
       },
       {
+        "id": 28,
         "name": "virtual mirror",
-        "imgLocation": "(../img/artist/tian_yonghua/virtual_mirror.jpg)"
+        "price": 12,
+        "imgLocation": "../img/artist/tian_yonghua/virtual_mirror.jpg"
       },
       {
+        "id": 29,
         "name": "wave 2",
-        "imgLocation": "(../img/artist/tian_yonghua/wave_2.jpg)"
+        "price": 19,
+        "imgLocation": "../img/artist/tian_yonghua/wave_2.jpg"
       }]
     }
-  ]
+    ]
   }
+  
+
     
 
 

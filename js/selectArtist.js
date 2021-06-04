@@ -18,10 +18,12 @@ const sellerTianYonghua = document.querySelector("#seller--tian-yonghua");
 
 /* First Empty gallery completely then add correct artwork */
 // listen for click - Artist Chris Lizarraga 
-sellerChrisLizarraga.addEventListener("click", function (){
-  emptyGallery();
-  addChrisLizarragaArt();
-});
+// sellerChrisLizarraga.addEventListener("click", function (){
+//   emptyGallery();
+//   addChrisLizarragaArt();
+// });
+console.log("----0-");
+console.log(artistInfo);
 
 // listen for click - Artist Dean and James
 sellerDeanAndJames.addEventListener("click", function (){

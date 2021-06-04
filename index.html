@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/cart.css" />
     <link rel="stylesheet" href="styles/nav.css" />
     <link rel="stylesheet" href="styles/carousel.css" />
     <link rel="stylesheet" href="styles/modal.css" />
@@ -65,6 +66,14 @@
       <a href="#gallery" id="nav-button-explore" class="nav-button">Gallery</a>
       <a href="#explore" id="nav-button-myItems" class="nav-button">My Items</a>
       <div id="nav-button-line"></div>
+      <!-- Once logged in -->
+      <div class="cart__btn">
+        <span class="nav-icon">
+          <i class="fas fa-cart-plus"></i>
+        </span>
+        <div class="cart__items">0</div>
+      </div>
+       <!-- End cart item-->
       <div class="dropdown">
         <a id="nav-button-logIn" class="nav-button">Log In</a>
       </div>
@@ -74,6 +83,36 @@
  </div>
 </nav>
 
+
+<!-- Cart -->
+<div class="cart__overlay">
+  <div class="cart">
+    <span class="cart__close">
+      <i class="fas fa-window-close"></i>
+    </span>
+    <h2>your cart</h2>
+    <div class="cart__content">
+      <!-- Cart Item -->
+      <!-- <div class="cart__item">
+        <img src="./img/artist/chris_lizarraga/even_shadows.png" alt="art"/>
+        <div>
+          <h4>Even Shadows</h4>
+          <h5>10 Eth</h5>
+          <span class="remove-item">remove</span>
+        </div>
+        <div>
+          <i class="fas fa-chevron-up"></i>
+          <p id="item-amount">1</p>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div> -->
+    </div>
+    <div class="cart__footer">
+      <h3>your total : <span class="cart__total">0</span> Eth</h3>
+      <button class="clear-cart banner-btn">clear cart</button>
+    </div>
+  </div>
+</div>
 
 <!--Carousel-->
 <div id="carousel" class="carousel">
@@ -323,8 +362,9 @@
   </div>
 </div>
   </body>
-  <script type="text/javascript" src="data.js"></script>
+  <script type="application/json" src="data/data.json"></script>
   <script type="text/javascript" src="js/carousel.js"></script>
   <script type="text/javascript" src="js/searchBar.js"></script>
   <script type="text/javascript" src="js/selectArtist.js"></script>
+  <script type="text/javascript" src="js/cart.js"></script>
 </html>
