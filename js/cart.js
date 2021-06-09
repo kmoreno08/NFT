@@ -18,116 +18,103 @@ let cart = [];
  let buttonsDOM = [];
 
 
-// getting the art
+// getting the art data
 class Art {
- 
  async getAllArtwork(){
    // fetch data of all artwork
    let result = await fetch('../data/data.json');
    // json to js
-   let data = await result.json()
-   // save all artist
-   let artists = data.artist;
+   const data = await result.json()
+   // save the artists object
+   const artists = data.artist;
+  // return artists
+   return artists;
 
-   // Use random number generator to pick random artist
-   let artist = getRandomArtist(artists);
+   // check for errors
+ } catch (error){
+   // print errors
+    console.log(error);
+ }
+
+//  getSpecificArtist(artist){
+//    console.log("MADE IT IN HERE AND IT DIDNT BREAK");
+//  }
+
+}
+
+
+
+  //  // Use random number generator to pick random artist
+  //  let artist = getRandomArtist(artists);
    // Save artist artwork information
    /////////////////////
-   let artistInfo = artist.art.map(art => {
-     const id = art.id;
-     const title = art.name;
-     const price = art.price;
-     const image = art.imgLocation;
-     return {id, title, price, image};
-   })
+  //  let artistInfo = artist.art.map(art => {
+  //    const id = art.id;
+  //    const title = art.name;
+  //    const price = art.price;
+  //    const image = art.imgLocation;
+  //    return {id, title, price, image};
+  //  })
    //////////////////////
-   // save the artist name
-   let artistName = artist.name
+  //  // save the artist name
+  //  let artistName = artist.name
 
    
-  //  this.displayRandomArtist(artist);
-  displayRandomArtist(artistInfo, artistName);
+  // //  this.displayRandomArtist(artist);
+  // displayRandomArtist(artistInfo, artistName);
   //  return artist
 
  
-   function displayRandomArtist(artistInfo, artistName){
-    const ui = new UI();
-    console.log("/////////////")
-    console.log(artistInfo);
-    ui.displayArtwork(artistInfo, artistName)
-    //  artistInfo.forEach(art => {
-     
-    //    console.log(art.title);
-    //    console.log(artistInfo);
-    //    console.log(artistName);
-    //    console.log("******************");
-    //    ui.displayArtwork(art, artistName)
-
-    //  })
-   }
+  //  function displayRandomArtist(artistInfo, artistName){
+  //   const ui = new UI();
+  //   console.log("/////////////")
+  //   console.log(artistInfo);
+  //   ui.displayArtwork(artistInfo, artistName)
+  //  }
  
 
-  function getRandomArtist(artists){
-    let artistNumber = getRandomInt(artists.length);
-    console.log(artistNumber);
-    let artist = artists[artistNumber];
-    return artist;
-    
-  }
-  // let artist = artists[artistNumber];
-  // console.log(artist);
-  // console.log(artist.art);
-
-  function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-  }
+  // function getRandomArtist(artists){
+  //   let artistNumber = getRandomInt(artists.length);
+  //   console.log(artistNumber);
+  //   let artist = artists[artistNumber];
+  //   return artist;
+  // }
 
 
+  // function getRandomInt(max) {
+  //   return Math.floor(Math.random() * max);
+  // }
 
-  //  artists.forEach(artist => {
-  //    console.log(artist);
-  //  })
-
-
+// }
   
-   return artists;
-    // artists = artists.map(item => {
-    //   console.log(item);
-    // })
-    // Artists is destructured
-  //  products = products.map(item => {
-  //    const {title, price} = item.fields;
-  //    const {id} = item.sys;
-  //    const image = item.fields.image.fields.file.url;
-  //    return {title, price, id, image};
-  //  })
-  //  return products;
- } catch (error){
-   console.log(error);
- }
+  //  return artists;
+//  } catch (error){
+//    console.log(error);
+//  }
 
- displayRandomArtist(artists){
-    console.log("In display Random");
+//  displayRandomArtist(artists){
+//     console.log("In display Random");
 
-}
-}
+// }
+// }
 
 class UI {
   // displays artwork for a given an artist
-  displayArtwork(art, artistName){
+  displayArtwork(artistInfo){
     let galleryCardInnerHTML = "";
     let result = "";
-    
+    // Get the name of artist
+    let artistName = artistInfo.name;
+  
     // loop through the artwork for specific artist
-
-    art.forEach(art => {
+    artistInfo.art.forEach(art => {
       // save html of each artwork in variable
       result += `<div class="gallery-card">
       <div class="gallery-text">
-        <div class="gallery-name">${art.title}</div>
+        <div class="gallery-name">${art.name}</div>
         <div class="gallery-artist">${artistName}</div>
       </div>
-      <img src=${art.image}>
+      <img src=${art.imgLocation}>
       <button class="bag-btn" >
             <i class="fas fa-shopping-cart"></i>
             add to cart
@@ -139,22 +126,79 @@ class UI {
     </div>`
   
     });
-    // 
-    // galleryCardInnerHTML = result;
-    // Display front page
+    // Display card in gallery
     galleryWrapperCard.innerHTML = result; 
   }
 
+  // Random integer to choose artist
+  getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
 
-  // displayRandomArtist(artists){
-    
-  // }
+  // Random artist to display
+  getRandomArtist(artists){
+    // use a random number to select which artist within length 
+    let artistNumber = this.getRandomInt(artists.length);
+    // Use random number to pick an artists
+    let artist = artists[artistNumber];
+    // return artist
+    return artist;
+  }
+
+  getSpecificArtist(artist){
+    console.log("This works");
+  }
 }
 
+//   // display random artist 
+//   displayRandomArtist(artistInfo){
+    
+//     this.displayArtwork(artistInfo)
+//    }
+// }
 
-var test = new Art();
-test.getAllArtwork();
 
+// var test = new Art();
+// test.getAllArtwork();
+
+
+// On load
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Has loaded");
+  const art = new Art();
+  const ui = new UI();
+
+
+  // get all artists data
+  art.getAllArtwork().then(
+    artistsObject => {
+      // Use random number generator to pick random artist
+      let randomArtistObject = ui.getRandomArtist(artistsObject);
+      // display random artists in gallery
+      ui.displayArtwork(randomArtistObject);
+      ui.getSpecificArtist(randomArtistObject);
+
+      // sellerChrisLizarraga.addEventListener("click", function (){
+      //   emptyGallery();
+      //   addChrisLizarragaArt();
+      // });
+    }
+  );
+  // let artists = dataObject.artists;
+  // console.log(artists);
+  // console.log("==++++++++");
+  // console.log(dataObject);
+
+    //  this.displayRandomArtist(artist);
+    // displayRandomArtist(artistInfo, artistName);
+
+     // save the artist name
+  //  let artistName = artist.name
+
+   // Use random number generator to pick random artist
+  //  let artist = getRandomArtist(artists);
+  
+})
 
 // display products
 // class UI {
