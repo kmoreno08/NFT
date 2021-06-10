@@ -8,7 +8,12 @@ const cartItems = document.querySelector(".cart__items");
 const cartTotal = document.querySelector(".cart__content");
 const cartContent = document.querySelector(".cart__content")
 const productsDOM = document.querySelector(".products-center");
-
+const sellersDOM = document.querySelector("#seller");
+// gallery variables
+// Select Each gallery card
+const galleryCard = document.getElementsByClassName("gallery-card");
+// Select Parent of gallery Card
+const galleryWrapperCard = document.querySelector(".gallery__wrapper__card");
 
 
 
@@ -36,67 +41,8 @@ class Art {
     console.log(error);
  }
 
-//  getSpecificArtist(artist){
-//    console.log("MADE IT IN HERE AND IT DIDNT BREAK");
-//  }
-
 }
 
-
-
-  //  // Use random number generator to pick random artist
-  //  let artist = getRandomArtist(artists);
-   // Save artist artwork information
-   /////////////////////
-  //  let artistInfo = artist.art.map(art => {
-  //    const id = art.id;
-  //    const title = art.name;
-  //    const price = art.price;
-  //    const image = art.imgLocation;
-  //    return {id, title, price, image};
-  //  })
-   //////////////////////
-  //  // save the artist name
-  //  let artistName = artist.name
-
-   
-  // //  this.displayRandomArtist(artist);
-  // displayRandomArtist(artistInfo, artistName);
-  //  return artist
-
- 
-  //  function displayRandomArtist(artistInfo, artistName){
-  //   const ui = new UI();
-  //   console.log("/////////////")
-  //   console.log(artistInfo);
-  //   ui.displayArtwork(artistInfo, artistName)
-  //  }
- 
-
-  // function getRandomArtist(artists){
-  //   let artistNumber = getRandomInt(artists.length);
-  //   console.log(artistNumber);
-  //   let artist = artists[artistNumber];
-  //   return artist;
-  // }
-
-
-  // function getRandomInt(max) {
-  //   return Math.floor(Math.random() * max);
-  // }
-
-// }
-  
-  //  return artists;
-//  } catch (error){
-//    console.log(error);
-//  }
-
-//  displayRandomArtist(artists){
-//     console.log("In display Random");
-
-// }
-// }
 
 class UI {
   // displays artwork for a given an artist
@@ -144,22 +90,46 @@ class UI {
     // return artist
     return artist;
   }
-
-  getSpecificArtist(artist){
-    console.log("This works");
+  
+  // display specific artist in 'Select Artist' section on click
+  getSpecificArtist(artistsObject){
+      sellersDOM.addEventListener("click", event => {
+        let name = "";
+      // check if name or amount is clicked and grab artists name
+      if(event.target.classList.contains('seller-name') || 
+         event.target.classList.contains('seller-amount')){
+           // get name and lower case
+          name = event.target.parentNode.children[1].innerHTML.toLowerCase();
+          // Check if name matches artists name in object
+          artistsObject.forEach(artist => {
+            console.log(artist);
+            // if found match then display artwork
+            if(artist.name === name){
+              // display artist
+              this.displayArtwork(artist);
+            }
+          })
+         }
+      // check if image is clicked and grab artists name
+      else if(event.target.parentNode.classList.contains('seller-icon')){
+        // lowercase name to match 
+        name = event.target.parentNode.parentNode.children[1].innerHTML.toLowerCase();
+        
+        // loop through object to find correct artist
+        artistsObject.forEach(artist => {
+          console.log(artist);
+          // if found match then display artwork
+          if(artist.name === name){
+            // display artist
+            this.displayArtwork(artist);
+          }
+        })
+      }
+    })
   }
+
+
 }
-
-//   // display random artist 
-//   displayRandomArtist(artistInfo){
-    
-//     this.displayArtwork(artistInfo)
-//    }
-// }
-
-
-// var test = new Art();
-// test.getAllArtwork();
 
 
 // On load
@@ -176,39 +146,16 @@ document.addEventListener("DOMContentLoaded", () => {
       let randomArtistObject = ui.getRandomArtist(artistsObject);
       // display random artists in gallery
       ui.displayArtwork(randomArtistObject);
-      ui.getSpecificArtist(randomArtistObject);
-
-      // sellerChrisLizarraga.addEventListener("click", function (){
-      //   emptyGallery();
-      //   addChrisLizarragaArt();
-      // });
-    }
-  );
-  // let artists = dataObject.artists;
-  // console.log(artists);
-  // console.log("==++++++++");
-  // console.log(dataObject);
-
-    //  this.displayRandomArtist(artist);
-    // displayRandomArtist(artistInfo, artistName);
-
-     // save the artist name
-  //  let artistName = artist.name
-
-   // Use random number generator to pick random artist
-  //  let artist = getRandomArtist(artists);
-  
+      ui.getSpecificArtist(artistsObject);
+      // ui.getSpecificArtist(randomArtistObject);
+      
+    })
+  // ).then(() => {
+  //   // ui.getSpecificArtist();
+  // })
 })
 
-// display products
-// class UI {
-//   displayProducts(products){
-//     let result = "";
-//     products.forEach(product => {
-//       result += ``
-//     })
-//   }
-// }
+
 
 // local storage
 /* saving in local storage */
