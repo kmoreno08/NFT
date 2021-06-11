@@ -196,7 +196,7 @@ body {
   -webkit-transform: translateX(80%);
           transform: translateX(80%);
   cursor: pointer;
-  z-index: 200;
+  z-index: 2;
 }
 
 .bag-btn:hover {
@@ -222,7 +222,7 @@ body {
   -webkit-transition: all 0.25s ease-in;
   transition: all 0.25s ease-in;
   cursor: pointer;
-  z-index: 200;
+  z-index: 2;
 }
 
 .eth-btn:hover {

@@ -1,7 +1,7 @@
 #modal {
   display: none;
   position: fixed;
-  z-index: 5;
+  z-index: 10;
   top: 0;
   left: 0;
   height: 100%;
@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  z-index: 5;
 }
 #modal__wrapper__searchBox {
   width: 100%;
@@ -34,6 +35,7 @@
   justify-content: space-between;
   padding: 20px 20px 20px 50px;
   background: lightcoral;
+  z-index: 5;
 }
 #modal__wrapper__searchBox--left {
   display: flex;

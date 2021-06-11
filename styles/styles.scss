@@ -161,7 +161,7 @@ body {
   transition: all 0.25s ease-in;
   transform: translateX(80%);
   cursor: pointer;
-  z-index: 200;
+  z-index: 2;
 }
 .bag-btn:hover {
   color: white;
@@ -185,7 +185,7 @@ body {
   // May implement in the future
   // transform: translateX(-69%);
   cursor: pointer;
-  z-index: 200;
+  z-index: 2;
 }
 .eth-btn:hover {
   color: white;
@@ -202,10 +202,6 @@ body {
   justify-content: flex-start;
 
   &__profile {
-    // align-self: center;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     background: rgb(18, 18, 18);
     height: 100%;
     // width: 85%;
