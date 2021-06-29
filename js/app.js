@@ -1,3 +1,4 @@
+// https://www.youtube.com/watch?v=023Psne_-_4&t=6710s
 // Variables
 const cartBtn = document.querySelector(".cart__btn");
 const closeCartBtn = document.querySelector(".cart__close");
@@ -7,6 +8,7 @@ const cartOverlay = document.querySelector(".cart__overlay");
 const cartItems = document.querySelector(".cart__items");
 const cartTotal = document.querySelector(".cart__total");
 const cartContent = document.querySelector(".cart__content")
+// const sellerCard = document.querySelectorAll(".seller-card");
 const productsDOM = document.querySelector(".products-center");
 const sellersDOM = document.querySelector("#seller");
 
@@ -49,7 +51,7 @@ const galleryWrapperCard = document.querySelector(".gallery__wrapper__card");
 class UI {
   // displays artwork for a given an artist
   displayArtwork(artistInfo){
-    let galleryCardInnerHTML = "";
+    // let galleryCardInnerHTML = "";
     let result = "";
     // Get the name of artist
     let artistName = artistInfo.name;
@@ -135,6 +137,8 @@ class UI {
 
   getBagButtons(){
     const buttons = [...document.querySelectorAll(".bag-btn")];
+    console.log("GetBagButtons is RUNNING");
+    console.log(buttons);
     
     buttonsDOM = buttons;
     buttons.forEach(button => {
@@ -170,14 +174,19 @@ class UI {
     })
 }
   setCartValues(cart){
+    console.log('SET CART VALUES');
+    console.log(cart, "CART");
   let tempTotal = 0;
   let itemsTotal = 0;
   // Go through each item to update price and amount
   cart.map(item => {
+    console.log(item);
     // Total price
     tempTotal += item.price * item.amount;
+    console.log(tempTotal, "Temp Total");
     // Total number of items
     itemsTotal += item.amount;
+    console.log(itemsTotal, "ItemsTotal");
   })
   // Total amount to two decimals
   cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
@@ -188,8 +197,11 @@ class UI {
   addCartItem(item){
     console.log("In Add Cart Item");
     console.log(item);
+    // Create Div
     const div = document.createElement('div');
+    // Add class to Div
     div.classList.add('cart__item');
+    // Add html to div with dynamic information
     div.innerHTML = `<img src="${item.imgLocation}" alt="art"/>
     <div>
       <h4>${item.name}</h4>
@@ -201,6 +213,7 @@ class UI {
       <p id="item-amount">${item.amount}</p>
       <i class="fas fa-chevron-down" data-id=${item.id}></i>
     </div>`;
+    // Append div to cartContent
     cartContent.appendChild(div);
     console.log(div);
     console.log(cartContent);
@@ -299,8 +312,10 @@ class UI {
   }
 
   clearCart(){
+    console.log("Entered Clear Cart");
     // Grab the id's from the cart and put in to an array
    let cartItems = cart.map(item => item.id);
+   console.log(cartItems);
    // Given array of id's now remove them
    cartItems.forEach(id => this.removeItem(id));
    // Any children will keep removing until none
@@ -313,8 +328,28 @@ class UI {
 
 
   removeItem(id){
+    console.log("Entered remove Item");
     // If Id's are the same as in cartItems array, then remove them
-    cart = cart.filter(item => item.id !== id);
+    console.log(id, "ID THAT IS PASSED");
+    
+    // cart.forEach(element => {
+    //   console.log("In For each");
+    //   console.log(element);
+    //   console.log(element.id);
+    //   if(id !== cart.id){
+    //     cart += element;
+    //     console.log("In If statement");
+    //     console.log(element);
+    //   }
+    // })
+    cart = cart.filter(item => {
+      console.log("In Filter");
+      console.log(item);
+      // console.log(item.id);
+      console.log(item.id);
+      return item.id != id;
+    });
+    // console.log(cart);
     // Set new values after filter
     this.setCartValues(cart);
     // Save cart values to local storage
@@ -445,6 +480,7 @@ class SearchBar {
 
 // On load
 document.addEventListener("DOMContentLoaded", () => {
+  // const sellerCard = document.querySelectorAll(".seller-card");
   console.log("Has loaded");
   const art = new Art();
   const ui = new UI();
@@ -453,7 +489,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Setup app
   ui.setupAPP();
 
-
+  // const sellerCard = document.querySelectorAll(".seller-card");
   // get all artists data
   art.getAllArtwork().then(
     artistsObject => {
@@ -473,10 +509,38 @@ document.addEventListener("DOMContentLoaded", () => {
       searchBar.searchBarUserInput(artistsObject);
   
     }).then(() => {
-      ui.getBagButtons();
+
+      document.querySelectorAll(".seller-card").forEach(el => {
+        el.addEventListener('click', function (e){
+          console.log("I MADE IT");
+          console.log(e);
+          ui.getBagButtons();
+          ui.cartLogic();
+        })
+      })
+      // ui.getBagButtons();
+      // const sellerCard = document.querySelectorAll(".seller-card");
+      // on click
+    //   sellerCard.addEventListener("click", () => {
+    
+    //   console.log("Seller Card is running");
+    // })
+     ui.getBagButtons();
       ui.cartLogic();
     })
+    // sellerCard.addEventListener("click", () => {
+    
+    //   console.log("Seller Card is running");
+    // })
   });
+
+// 
+//   const sellerCard = document.querySelectorAll(".seller-card");
+//   // on click
+// sellerCard.addEventListener("click", () => {
+
+//   console.log("Seller Card is running");
+// })
 
 
 // local storage
@@ -515,3 +579,13 @@ class Storage {
     return localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')): [];
   }
 }
+
+
+// const sellerCard = [...document.querySelectorAll(".seller-card")];
+// console.log("SELLER CARD");
+// console.log(sellerCard);
+// // on click
+// sellerCard.forEach(function)().addEventListener("click", () => {
+
+// console.log("Seller Card is running");
+// })
