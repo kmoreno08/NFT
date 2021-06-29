@@ -145,7 +145,7 @@ class UI {
       // will return id's
       let id = button.dataset.id;
       console.log(id);
-      let inCart = cart.find(item => item.id === id);
+      let inCart = cart.find(item => item.id == id);
       // check if item is in the cart
       if(inCart){
         // Change text and disable button if item is in cart
@@ -275,7 +275,7 @@ class UI {
         // Grab ID
         let id = addAmount.dataset.id;
         // Find item by id
-        let tempItem = cart.find(item => item.id === id);
+        let tempItem = cart.find(item => item.id == id);
         console.log(tempItem, "TEMP ITEM");
         // save amount in temp
         tempItem.amount = tempItem.amount + 1;
@@ -292,7 +292,7 @@ class UI {
       else if (event.target.classList.contains('fa-chevron-down')){
         let lowerAmount = event.target;
         let id = lowerAmount.dataset.id;
-        let tempItem = cart.find(item => item.id === id);
+        let tempItem = cart.find(item => item.id == id);
          // save amount in temp
          tempItem.amount = tempItem.amount - 1;
         
@@ -361,8 +361,9 @@ class UI {
   }
 
   getSingleButton(id){
+    console.log("In Get single Button");
     // Will grab specific button
-    return buttonsDOM.find(button => button.dataset.id === id);
+    return buttonsDOM.find(button => button.dataset.id == id);
   }
 };
 
