@@ -97,6 +97,7 @@ class UI {
   
   // display specific artist in 'Select Artist' section on click
   getSpecificArtist(artistsObject){
+    console.log("Entered getSpecificArtists");
       sellersDOM.addEventListener("click", event => {
         let name = "";
       // check if name or amount is clicked and grab artists name
@@ -113,6 +114,8 @@ class UI {
               this.displayArtwork(artist);
             }
           })
+          this.getBagButtons();
+          this.cartLogic();
          }
       // check if image is clicked and grab artists name
       else if(event.target.parentNode.classList.contains('seller-icon')){
@@ -128,8 +131,13 @@ class UI {
             this.displayArtwork(artist);
           }
         })
+
+        this.getBagButtons();
+        this.cartLogic();
       }
     })
+    // this.getBagButtons();
+    // this.cartLogic();
   }
 
 
@@ -148,6 +156,8 @@ class UI {
       let inCart = cart.find(item => item.id == id);
       // check if item is in the cart
       if(inCart){
+
+        console.log("IN IN CART");
         // Change text and disable button if item is in cart
         button.innerText = "In Cart";
         button.disabled = true;
@@ -511,37 +521,10 @@ document.addEventListener("DOMContentLoaded", () => {
   
     }).then(() => {
 
-      document.querySelectorAll(".seller-card").forEach(el => {
-        el.addEventListener('click', function (e){
-          console.log("I MADE IT");
-          console.log(e);
-          ui.getBagButtons();
-          ui.cartLogic();
-        })
-      })
-      // ui.getBagButtons();
-      // const sellerCard = document.querySelectorAll(".seller-card");
-      // on click
-    //   sellerCard.addEventListener("click", () => {
-    
-    //   console.log("Seller Card is running");
-    // })
      ui.getBagButtons();
       ui.cartLogic();
     })
-    // sellerCard.addEventListener("click", () => {
-    
-    //   console.log("Seller Card is running");
-    // })
   });
-
-// 
-//   const sellerCard = document.querySelectorAll(".seller-card");
-//   // on click
-// sellerCard.addEventListener("click", () => {
-
-//   console.log("Seller Card is running");
-// })
 
 
 // local storage
