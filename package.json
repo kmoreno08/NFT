@@ -1,0 +1,23 @@
+{
+  "name": "Test_NFT",
+  "version": "1.0.0",
+  "description": "NFT website where the user can use Ethereum to purchase artwork and save to their created profile.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmoreno08/NFT.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kmoreno08/NFT/issues"
+  },
+  "homepage": "https://github.com/kmoreno08/NFT#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}
